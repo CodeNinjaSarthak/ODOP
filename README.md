@@ -34,10 +34,14 @@ To set up ODOP locally and start exploring unique products from every district i
    (for windows)
    ```bash
     pip install django
+
+    ```
     
 (for UNIX based)
     ```bash
     pip3 install django
+
+    ```
 
 
 3.  cd into the cloned directory
@@ -45,15 +49,21 @@ To set up ODOP locally and start exploring unique products from every district i
     ```bash
     cd ODOP
 
+    ```
+
 
 
 4.  run the command
     (for windows)
     ```bash
     python manage.py runserver 
+
+    ```
     
 
 (for windows)
     ```bash
-        python3 manage.py runserver (for Unix based)
+    python3 manage.py runserver (for Unix based)
+
+    ```
     
