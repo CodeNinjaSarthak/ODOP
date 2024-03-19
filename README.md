@@ -30,40 +30,45 @@ To set up ODOP locally and start exploring unique products from every district i
 
    ```
 
-2. Install these libraries
-   (for windows)
-   ```bash
-    pip install django
+2. Install Django:
 
-    ```
-    
-(for UNIX based)
-    ```bash
-    pip3 install django
+   - For Windows:
+     ```bash
+     pip install django
+     ```
 
-    ```
+   - For Unix-based systems:
+     ```bash
+     pip3 install django
+     ```
+
+3. Install jazzmin
+    - For Windows:
+     ```bash
+     pip install django-jazzmin
+     ```
+
+    - For Unix-based systems:
+     ```bash
+     pip3 install django-jazzmin
+     ```
 
 
 3.  cd into the cloned directory
 
     ```bash
-    cd ODOP
-
-    ```
-
+     cd ODOP
+     ```
 
 
-4.  run the command
-    (for windows)
-    ```bash
-    python manage.py runserver 
 
-    ```
-    
+4. To run the server
+    - For Windows:
+     ```bash
+     python manage.py runserver
+     ```
 
-(for windows)
-    ```bash
-    python3 manage.py runserver (for Unix based)
-
-    ```
-    
+    - For Unix-based systems:
+     ```bash
+     python3 manage.py runserver
+     ```
