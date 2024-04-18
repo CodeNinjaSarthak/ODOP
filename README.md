@@ -42,17 +42,6 @@ To set up ODOP locally and start exploring unique products from every district i
      pip3 install django
      ```
 
-3. Install jazzmin
-    - For Windows:
-     ```bash
-     pip install django-jazzmin
-     ```
-
-    - For Unix-based systems:
-     ```bash
-     pip3 install django-jazzmin
-     ```
-
 
 3.  cd into the cloned directory
 
