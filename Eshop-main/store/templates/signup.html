@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+body{
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.aybL_JeEyVZJqCtolIPn_QHaEK%26pid%3DApi&f=1&ipt=d0bfceea70461e9a154bb4a7cbd1f0faecee17483ba032837b1b02116555d7e3&ipo=images);
+    background-size: cover; /* to cover the entire background */
+        background-position: center; /* center the background image */
+        /* background-repeat: no-repeat; */
+}
+input{
+    margin-top:20px;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+     
+}
+input[type="submit"]{
+    background-color: rgba(14, 19, 19, 0.636);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+}
+.form-group{
+    font-weight: bold;
+
+}
+button {
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+button:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+</style>
+
+<div class="container mt-4">
+    
+    <div class="p-3 m-3">
+
+        
+        <div class="col-lg-5 rounded mx-auto border pt-4 " style= "border: none !important;">
+            <div class="text-center col">
+            
+            <!-- <hr> -->
+            <hr>
+            </div>
+            <h3 class="alert alert-success rounded-pill" style="text-align:center;font-weight: bold;color: black; background-color: transparent; border-color: transparent;">Create an Account</h3>
+            <form action="/signup" method="POST">
+                
+                {% csrf_token %}
+
+                {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <!-- firstname -->
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="firstname" placeholder="First Name"
+                     id="" value="{{values.first_name}}" class="form-control form-control-sm" 
+                     placeholder="">
+                </div>
+
+                <!-- last name -->
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" name="lastname" placeholder="Last Name"
+                    id="" value="{{values.last_name}}" class="form-control form-control-sm"
+                    >
+                </div>
+
+                <!-- phone -->
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" name="phone" 
+                    id="" class="form-control form-control-sm" placeholder="Phone number"
+                    value="{{values.phone}}"
+                    placeholder="9876543210"
+                    >
+                </div>
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input required type="email" name="email" id="" placeholder="Email"
+                    value="{{values.email}}" 
+                    class=" form-control-sm form-control" placeholder="abc@gmail.com">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" 
+                    name="password" 
+                    id="" placeholder="Enter password"
+                     class="form-control form-control-sm">
+                </div>
+
+                <!--Checkme button-->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <b>
+                        <br><br>
+                    <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
+                    </b>
+                </div>
+                <hr>
+                <button type="submit">Create an account</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

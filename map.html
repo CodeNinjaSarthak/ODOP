@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="app/css/style.css" /> -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      .container {
+        text-align: center;
+      }
+      body{
+            background-image: url("https://www.explorebharat.com/img/pink-taj.webp");
+            background-size: cover; /* Cover the entire link with the background image */
+            background-position: center;
+
+        }
+    
+        /* Navbar Brand */
+.navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.bg-danger {
+    --bs-bg-opacity: 1;
+    background-color: rgba(0, 0, 0, 1) !important; /* Change to black color */
+}
+
+
+/* Navbar Toggler Icon */
+.navbar-toggler-icon {
+    background-color: white;
+    
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    background-color: #0b0a0a; /* Adjust color as needed */
+}
+
+.dropdown-menu a.dropdown-item {
+    color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #2331c8; /* Adjust color as needed */
+}
+
+/* Search Form */
+.navbar form {
+    margin-right: 20px;
+}
+
+/* Profile Dropdown */
+#profileDropdown.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    background-color: #dc3545; /* Adjust color as needed */
+}
+
+#profileDropdown.dropdown-menu a.dropdown-item {
+    color: white;
+}
+
+#profileDropdown.dropdown-menu a.dropdown-item:hover {
+    background-color: #c82333; /* Adjust color as needed */
+}
+
+     
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">    <!--we can use primary also-->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+        <img src="assets/images/logo1.jpg" width="100" height="55"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                States
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/store">jammu & kashmir</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/store">uttrakhand</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/store">kerala</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/store">uttar pradesh</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'SPC">sikkim</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'MC">assam</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'EC">Andhra pradesh</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'TCC">rajasthan</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'ZSC">tamil nadu</a></li>
+              </ul>
+            </li>
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Districts
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">kashmir</a></li>
+                <li><a class="dropdown-item" href="#">bikaner</a></li>
+                <li><a class="dropdown-item" href="#">jaipur</a></li>
+                <li><a class="dropdown-item" href="#">gb nagar</a></li>
+                <li><a class="dropdown-item" href="#">jaisalmer</a></li>
+                <li><a class="dropdown-item" href="#">madurai</a></li>
+                <li><a class="dropdown-item" href="#">jodhpur</a></li>
+                <li><a class="dropdown-item" href="#">dharamshala</a></li>
+                <li><a class="dropdown-item" href="#">dalhousie</a></li>
+                <li><a class="dropdown-item" href="#">pori</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="">About Us</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-white" href="">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="map.html"> blog </a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="font-weight: bold;color: black;">Search</button>
+          </form>
+        </div>
+        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle text-white" href="#" 
+            id="profileDropdown" role="button" data-bs-toggle="dropdown" 
+            aria-expanded="false">User</a>
+            <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href ="http://127.0.0.1:8000/login" >Profile</a></li>
+                <li><a class="dropdown-item" href ="http://127.0.0.1:8000/login" >Orders</a></li>
+                <li><a class="dropdown-item" href ="http://127.0.0.1:8000/login" >Change Password</a></li>
+                <li><a class="dropdown-item" href ="http://127.0.0.1:8000/login" >Logout</a></li>
+            </ul>
+        </li>
+        <!-- <li class="nav-item mx-2">
+        <a herf="#" class="nav-link text-white">Cart 4</a>
+        </li> -->
+        <!-- <li class="nav-item mx-2">
+        <a herf="#" class="nav-link text-white">WishList 4</a>
+        </li> -->
+        <li class="nav-item mx-2">
+        <a herf="http://127.0.0.1:8000/login" class="nav-link text-white">Login</a>
+        </li>
+        <li class="nav-item mx-2">
+        <a href="http://127.0.0.1:8000/signup" class="nav-link text-white">Registration</a>
+        </li>
+       </ul>
+       </div>
+    </nav>
+    
+
+    <div class="container">
+      <h2>Image Maps</h2>
+      <p>State India</p>
+
+      <img
+        src="indian_map.png"
+        alt="indian_map"
+        usemap="#image-map"
+        width="550"
+        height="675"
+      />
+
+      <map name="image-map">
+        <area
+          target="_parent"
+          alt="Jammu and Kashmir"
+          title="Jammu and Kashmir"
+          href="explorefolder/explorepage.html"
+          coords="43,106,148,103,152,96,157,89,163,85,169,85,173,90,178,92,184,91,188,95,195,97,202,97,209,101,215,100,219,94,215,85,207,79,207,69,214,67,216,60,222,54,227,48,230,33,216,28,203,28,190,34,179,33,168,26,155,16,144,4,132,2,112,9,102,13,94,21,103,25,109,32,114,34,120,42,120,48,113,51,109,55,107,65,108,72,111,79,111,86,118,93,125,93,129,100,134,101"
+          shape="poly"
+        />
+        <area
+          target="_parent"
+          alt="Himachal"
+          title="Himachal"
+          href="Himachal.html"
+          coords="179,94,184,91,188,95,195,98,200,103,200,108,203,115,204,122,205,132,196,130,189,132,186,141,181,147,173,140,168,134,160,125,153,115,148,109,151,100,153,92,160,87,167,85"
+          shape="poly"
+        />
+        <area
+          target="_parent"
+          alt="Punjab"
+          title="Punjab"
+          href="Punjab.html"
+          coords="153,103,148,108,153,115,156,120,160,123,163,127,166,133,168,139,168,147,161,151,157,158,147,158,136,158,127,156,115,152,116,142,129,131,128,124,128,115,134,110"
+          shape="poly"
+        />
+        <area
+          target="_parent"
+          alt="Uttarakhand"
+          title="Uttarakhand"
+          href="Uttarakhand.html"
+          coords="213,126,206,131,196,129,190,131,187,139,186,144,187,151,188,158,197,160,201,163,206,165,211,173,217,176,225,179,231,171,233,162,239,152,245,150,231,142,225,136,217,135"
+          shape="poly"
+        />
+        <area
+        target="_parent"
+        alt="Rajasthan"
+        title="Rajasthan"
+        href="Rajasthan.html"
+        coords="59,261,53,253,52,242,43,238,45,229,41,221,30,219,34,211,37,205,43,197,52,190,61,193,66,193,74,193,80,187,88,177,101,169,104,157,113,151,125,156,129,165,137,169,145,178,157,193,170,189,167,194,173,205,183,212,181,221,193,221,176,229,162,242,167,250,175,253,169,262,168,274,152,283,149,265,132,255,128,266,126,271,133,277,131,284,126,290,122,296,88,265,95,265,75,263"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Haryana"
+        title="Haryana"
+        href="Haryana.html"
+        coords="129,165,131,155,148,161,160,157,172,145,184,146,176,161,176,173,177,188,180,191,182,197,173,203,164,193,153,198,145,173" 
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Uttar_Pradesh"
+        title="Uttar_Pradesh"
+        href="Uttar_Pradesh.html"
+        coords="186,156,191,157,197,157,202,164,208,171,213,174,219,176,226,178,230,182,239,184,246,184,253,190,262,196,275,204,288,208,296,208,307,218,302,232,315,242,305,244,299,247,291,251,290,260,290,270,282,278,272,260,263,258,255,252,247,255,235,255,226,255,215,253,207,249,202,261,205,267,200,269,209,229,203,218,193,217,183,221,180,207,177,179,177,165,179,158"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Bihar"
+        title="Bihar"
+        href="Bihar.html"
+        coords="308,212,312,211,315,216,325,217,333,218,344,223,353,224,365,225,373,229,371,239,371,245,365,250,359,257,356,261,345,267,331,262,325,269,312,268,298,267,290,260,294,248,317,244,305,222,294,248,308,212,304,233"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Sikkim"
+        title="Sikkim"
+        href="Sikkim.html"
+        coords="377,211,389,210,389,199,387,191,378,194"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="West_Bengal"
+        title="West_Bengal"
+        href="West_Bengal.html"
+        coords="379,220,379,226,377,233,377,240,378,248,371,253,373,261,375,268,371,277,360,285,352,289,344,293,339,296,344,301,350,307,352,312,360,316,371,324,376,317,391,315,394,300,390,273,381,257,387,254,391,247,384,226,370,237,388,223,394,225,398,231,404,231,408,219,391,216,383,211"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Assam"
+        title="Assam"
+        href="Assam.html"
+        coords="411,220,418,213,426,217,439,217,449,217,458,214,471,211,479,212,487,205,493,197,506,193,519,189,519,194,523,198,516,205,509,209,506,215,495,218,492,225,488,232,479,237,478,243,471,249,472,254,472,262,466,269,458,257,460,235,447,233,437,235,423,235,413,233"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Meghalaya"
+        title="Meghalaya"
+        href="Meghalaya.html"
+        coords="409,236,414,246,419,251,432,253,449,249,460,244,455,232,427,236"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Arunachal_Pradesh"
+        title="Arunachal_Pradesh"
+        href="Arunachal_Pradesh.html"
+        coords="452,211,450,202,445,195,458,191,468,187,476,180,484,172,496,164,502,163,511,167,524,163,529,167,535,171,533,178,541,178,549,178,546,190,546,201,535,199,517,215,516,187,493,194,489,202,483,206,476,209,462,211,525,195" 
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Nagaland"
+        title="Nagaland"
+        href="Nagaland.html"
+        coords="480,237,491,232,493,220,503,218,508,216,513,221,510,229,507,237,495,235,484,242" 
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Manipur"
+        title="Manipur"
+        href="Manipur.html"
+        coords="473,259,479,247,489,239,499,239,503,242,504,247,502,259,496,266,496,275,487,272,471,269"
+        shape="poly"
+      />
+      <area
+        target="_parent"
+        alt="Mizoram"
+        title="Mizoram"
+        href="Mizoram.html"
+        coords="459,274,467,271,475,272,486,279,481,283,478,291,475,303,475,310,466,312"
+        shape="poly"
+      />
+      <area
+      target="_parent"
+      alt="Tirpura"
+      title="Tirpura"
+      href="Tirpura.html"
+      coords="455,263,443,275,438,279,450,290,454,277"
+      shape="poly"
+    />
+    <area
+      target="_parent"
+      alt="Ladakh"
+      title="Ladakh"
+      href="Ladakh.html"
+      coords="95,26,102,14,111,11,136,4,144,4,168,19,169,28,176,32,194,35,215,29,225,29,227,41,223,56,210,68,209,79,218,97,200,97,185,92,173,90,149,54,129,46,117,46,154,65,141,44,114,38" 
+      shape="poly"
+    />
+    <area
+      target="_parent"
+      alt="Jharkand"
+      title="Jharkand"
+      href="Jharkand.html"
+      coords="345,309,339,316,324,315,322,307,312,311,306,303,302,294,298,285,292,276,298,268,311,270,324,270,338,267,346,267,359,261,364,257,370,255,373,266,346,289,349,280,353,277"
+      shape="poly"
+    />
+    <area
+      target="_parent"
+      alt="Odisha"
+      title="Odisha"
+      href="Odisha.html"
+      coords="299,311,308,311,315,313,322,315,332,319,347,315,354,316,365,324,358,331,355,340,355,351,347,359,338,362,323,370,319,375,314,382,306,384,296,379,286,391,277,395,267,399,255,403,272,380,265,360,275,360,275,343,292,333" 
+      shape="poly"
+    />
+    <area
+      target="_parent"
+      alt="Chhattisgarh"
+      title="Chhattisgarh"
+      href="Chhattisgarh.html"
+      coords="290,280,303,286,300,293,304,305,293,317,287,331,279,334,271,345,269,354,261,361,267,369,270,379,262,391,252,401,242,395,234,387,239,375,243,367,237,354,237,341,238,327,254,317,262,304,265,290,263,283" 
+      shape="poly"
+    /> 
+    <area
+      target="_parent"
+      alt="Madhya_Pradesh"
+      title="Madhya_Pradesh"
+      href="Madhya_Pradesh.html"
+      coords="281,277,274,269,264,261,254,257,244,263,231,257,215,256,205,253,207,266,203,272,193,268,193,259,204,238,205,216,187,219,168,231,161,244,179,255,169,260,170,270,154,279,144,268,135,260,130,271,127,285,123,297,115,307,117,320,130,329,143,332,155,340,172,327,180,332,192,330,204,329,214,327,224,327,235,329,247,313,257,307" 
+      shape="poly"
+    /> 
+    <area
+      target="_parent"
+      alt="Gujarat"
+      title="Gujarat"
+      href="Gujarat.html"
+      coords="14,311,28,312,41,303,24,302,12,296,6,282,13,276,27,272,37,272,43,272,51,272,67,268,79,266,86,268,92,278,106,292,114,298,111,305,111,319,106,330,101,340,95,356,84,333,84,314,76,320,73,328,68,339,51,346" 
+      shape="poly"
+    />
+    <area
+      target="_parent"
+      alt="Maharashtra"
+      title="Maharashtra"
+      href="Maharashtra.html"
+      coords="94,395,92,373,88,361,98,361,109,347,116,332,116,324,122,326,128,329,141,336,153,337,160,332,171,331,180,331,201,333,220,333,225,331,233,347,239,358,240,368,234,377,227,387,224,374,199,364,187,375,187,386,181,394,171,396,160,408,155,412,139,408,140,415,131,420,122,425,115,431,116,442,106,445,100,432" 
+      shape="poly"
+    /> 
+    <area
+      target="_parent"
+      alt="Telangana"
+      title="Telangana"
+      href="Telangana.html"
+      coords="179,436,179,417,183,399,188,378,195,370,203,371,219,373,227,387,238,399,246,405,246,417,228,420,219,428,203,438,189,442"
+      shape="poly"
+    />  
+    <area
+      target="_parent"
+      alt="Andhra_Pradesh"
+      title="Andhra_Pradesh"
+      href="Andhra_Pradesh.html"
+      coords="169,463,177,449,186,448,197,446,207,442,218,435,229,430,239,427,250,422,252,407,264,404,280,398,295,387,303,387,309,387,308,395,292,403,281,411,277,419,272,424,267,433,243,440,227,455,228,464,228,479,228,488,223,494,210,499,196,503,195,495,190,487,183,485,177,477,171,471" 
+      shape="poly"
+    />
+    <area
+      target="_parent"
+      alt="Karnataka"
+      title="Karnataka"
+      href="Karnataka.html"
+      coords="131,509,142,521,154,525,171,531,179,523,183,509,197,500,188,483,177,475,168,465,174,448,179,433,182,404,177,397,163,406,158,417,144,417,138,420,132,422,119,433,117,452,118,468,123,497" 
+      shape="poly"
+    />
+    <area
+    target="_parent"
+    alt="Daman_and_Diu"
+    title="Daman_and_Diu"
+    href="Daman_and_Diu.html"
+    coords="87,349,91,356,81,353"
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Goa"
+    title="Goa"
+    href="Goa.html"
+    coords="115,447,101,449,110,452,111,457"
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Tamil_Nadu"
+    title="Tamil_Nadu"
+    href="Tamil_Nadu.html"
+    coords="157,528,170,530,179,521,183,512,190,505,199,504,206,504,218,502,232,497,232,510,224,515,222,522,222,533,222,542,222,551,211,557,209,566,205,577,195,579,184,590,180,600,174,597,175,565,168,553,162,538" 
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Puducherry"
+    title="Puducherry"
+    href="Puducherry.html"
+    coords="222,525,228,526,224,515"
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Kerala"
+    title="Kerala"
+    href="Kerala.html"
+    coords="127,510,135,510,145,518,149,523,155,536,157,546,164,556,170,566,171,578,165,588,159,576,150,553,142,535,140,525"
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Andaman_and_Nicobar"
+    title="Andaman_and_Nicobar"
+    href="Andaman_and_Nicobar.html"
+    coords="477,490,477,507,475,516,469,535,472,547,478,564,478,582,491,605,502,619"
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Lakshadweep"
+    title="Lakshadweep"
+    href="Lakshadweep.html"
+    coords="67,549,72,556,87,558,88,540,83,558,94,541,67,536,97,538,87,558,88,540,96,552" 
+    shape="poly"
+  />
+  <area
+    target="_parent"
+    alt="Delhi"
+    title="Delhi"
+    href="Delhi.html"
+    coords="185,147,178,158,175,169,177,178,179,188"
+    shape="poly"
+  />
+      />
+      </map>
+    </div>
+  </body>
+</html>
