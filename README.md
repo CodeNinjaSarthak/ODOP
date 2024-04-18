@@ -1,6 +1,6 @@
 # Welcome to ODOP: One District One Product
 
-![ODOP Logo](/Users/sarthak/Downloads/WhatsApp Image 2024-04-18 at 16.29.49.jpeg)
+![ODOP Logo](logo.jpeg)
 
 ODOP (One District One Product) is an innovative e-commerce platform showcasing unique products from every district across India. Our mission is to promote local artisans, craftsmen, and entrepreneurs by providing a centralized platform to showcase and sell their distinctive products.
 
